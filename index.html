@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>PetHealth</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+        <script src="js/app.js" defer></script>
+    </head>
+
+    <body>
+
+    <!-- - - - sidebar - - - -->
+    <aside class="sidebar">
+        <div class="logo">PetHealth<span>.</span></div>
+        <ul class="menu">
+            <li><a data-screen="home" class="active">Home</a></li>
+            <li><a data-screen="dashboard">Dashboard</a></li>
+            <li><a data-screen="pet">Pet</a></li>
+            <li><a data-screen="assistant">Assistente</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+    </aside>
+
+    <!-- - - - wrapper - - - -->
+    <main class="screens-wrapper">
+
+        <!-- - - - home - - - -->
+        <section id="home" class="screen active">
+            <div class="hero">
+                <div>
+                    <h1>Cuidado inteligente para o seu pet</h1>
+                    <p>Acompanhe saúde, vacinas e bem-estar em um só lugar.</p>
+                    <button class="btn-primary" data-screen="dashboard">Começar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- - - - dashboard - - - -->
+        <section id="dashboard" class="screen">
+            <h2>Dashboard</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Peso Atual</h3>
+                    <p class="value">4.2 kg</p>
+                </div>
+                <div class="card">
+                    <h3>Vacinas</h3>
+                    <p class="value">100% ✅</p>
+                </div>
+                <div class="card">
+                    <h3>Próx consulta</h3>
+                    <p class="value">12/11</p>
+                </div>
+            </div>
+            <div class="chart-box">
+                <h3>Evolução do Peso</h3>
+                <canvas id="weightChart"></canvas>
+            </div>
+        </section>
+
+        <!-- - - - pet - - - -->
+        <section id="pet" class="screen">
+            <h2>Meu Pet</h2>
+            <div class="pet-card">
+                <img src="spider.jpg" alt="Foto do pet">
+                <div>
+                    <h3>Spiderman</h3>
+                    <p>Gato • 1 ano</p>
+                    <p>Peso: 3.2 kg</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Histórico</h3>
+                <p>✅ Vacina V4 — 2024</p>
+                <p>✅ Vermífugo — Out/2024</p>
+                <p>📅 Próxima consulta — 12/11/2025</p>
+            </div>
+        </section>
+
+        <!-- - - - assistente - - - -->
+        <section id="assistant" class="screen">
+            <h2>Assistente Veterinário</h2>
+            <div id="chat" class="chat-box"></div>
+
+            <div class="input-area">
+                <input id="inputMsg" placeholder="Digite sua dúvida...">
+                <button id="sendBtn" class="btn-primary">Enviar</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- - - - footer - - - -->
+    <footer class="footer">
+        🐾 PetHealth © 2025 — Feito com carinho para os pets 💙
+    </footer>
+
+</body>
+
+</html>
